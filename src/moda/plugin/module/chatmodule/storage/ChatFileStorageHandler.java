@@ -1,9 +1,8 @@
-package com.mineglade.moda.chatmodule.storage;
+package moda.plugin.module.chatmodule.storage;
 
-import com.mineglade.moda.modules.Module;
-import com.mineglade.moda.utils.storage.FileStorageHandler;
-import com.mineglade.moda.utils.storage.ModuleStorageHandler;
-
+import moda.plugin.moda.modules.Module;
+import moda.plugin.moda.utils.storage.FileStorageHandler;
+import moda.plugin.moda.utils.storage.ModuleStorageHandler;
 import xyz.derkades.derkutils.NoParameter;
 import xyz.derkades.derkutils.bukkit.BukkitFuture;
 

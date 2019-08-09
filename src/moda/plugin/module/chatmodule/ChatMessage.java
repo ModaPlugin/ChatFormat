@@ -1,6 +1,6 @@
-package com.mineglade.moda.chatmodule;
+package moda.plugin.module.chatmodule;
 
-import com.mineglade.moda.modules.IMessage;
+import moda.plugin.moda.modules.IMessage;
 
 public enum ChatMessage implements IMessage {
 

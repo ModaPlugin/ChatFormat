@@ -1,21 +1,20 @@
-package com.mineglade.moda.chatmodule;
+package moda.plugin.module.chatmodule;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
-import com.mineglade.moda.modules.IMessage;
-import com.mineglade.moda.modules.Module;
-import com.mineglade.moda.modules.chat.storage.ChatDatabaseStorageHandler;
-import com.mineglade.moda.modules.chat.storage.ChatFileStorageHandler;
-import com.mineglade.moda.modules.chat.storage.ChatStorageHandler;
-import com.mineglade.moda.utils.placeholders.ModaPlaceholderAPI;
-import com.mineglade.moda.utils.storage.DatabaseStorageHandler;
-import com.mineglade.moda.utils.storage.FileStorageHandler;
-import com.mineglade.moda.utils.vault.VaultHandler;
-import com.mineglade.moda.utils.vault.VaultNotAvailableException;
-
+import moda.plugin.moda.modules.IMessage;
+import moda.plugin.moda.modules.Module;
+import moda.plugin.moda.utils.placeholders.ModaPlaceholderAPI;
+import moda.plugin.moda.utils.storage.DatabaseStorageHandler;
+import moda.plugin.moda.utils.storage.FileStorageHandler;
+import moda.plugin.moda.utils.vault.VaultHandler;
+import moda.plugin.moda.utils.vault.VaultNotAvailableException;
+import moda.plugin.module.chatmodule.storage.ChatDatabaseStorageHandler;
+import moda.plugin.module.chatmodule.storage.ChatFileStorageHandler;
+import moda.plugin.module.chatmodule.storage.ChatStorageHandler;
 import xyz.derkades.derkutils.bukkit.Chat;
 import xyz.derkades.derkutils.bukkit.Colors;
 import xyz.derkades.derkutils.bukkit.PlaceholderUtil.Placeholder;
@@ -25,13 +24,8 @@ public class ChatModule extends Module<ChatStorageHandler> {
 	private VaultHandler vault;
 
 	@Override
-	public String getName() {
-		return "Chat";
-	}
-
-	@Override
-	public IMessage[] getMessages() {
-		return ChatMessage.values();
+	public DatabaseStorageHandler getDatabaseStorageHandler() {
+		return new ChatDatabaseStorageHandler(this);
 	}
 
 	@Override
@@ -40,19 +34,13 @@ public class ChatModule extends Module<ChatStorageHandler> {
 	}
 
 	@Override
-	public DatabaseStorageHandler getDatabaseStorageHandler() {
-		return new ChatDatabaseStorageHandler(this);
+	public IMessage[] getMessages() {
+		return ChatMessage.values();
 	}
 
 	@Override
-	public void onEnable() {
-		try {
-			this.vault = new VaultHandler(this);
-			this.vault.getChat();
-		} catch (final VaultNotAvailableException e) {
-			this.logger.info("Vault not installed, vault Placeholders will not work.");
-			this.vault = null;
-		}
+	public String getName() {
+		return "Chat";
 	}
 
 	@EventHandler(ignoreCancelled = true, priority = EventPriority.HIGH)
@@ -76,6 +64,17 @@ public class ChatModule extends Module<ChatStorageHandler> {
 									message, vaultPrefix, vaultSuffix, vaultGroup)));
 		}
 		event.getRecipients().clear();
+	}
+
+	@Override
+	public void onEnable() {
+		try {
+			this.vault = new VaultHandler(this);
+			this.vault.getChat();
+		} catch (final VaultNotAvailableException e) {
+			this.logger.info("Vault not installed, vault Placeholders will not work.");
+			this.vault = null;
+		}
 	}
 
 }
