@@ -1,23 +1,15 @@
 package moda.plugin.module.chatmodule;
 
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
-
 import moda.plugin.moda.modules.LangFile;
+import xyz.derkades.derkutils.bukkit.command.Command;
 
 public class ChatMuteCommand extends Command{
 
-	private final LangFile lang;
-	
-	protected ChatMuteCommand(String name) {
-		super(name);
+	public ChatMuteCommand() {
+		super(null, null, null, null, null, null);
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
-	public boolean execute(CommandSender sender, String commandLabel, String[] args) {
-		// TODO Auto-generated method stub
-		return false;
-	}
+	private final LangFile lang;
 
 }
