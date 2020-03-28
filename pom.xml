@@ -18,14 +18,14 @@
 
 	<build>
 		<sourceDirectory>src</sourceDirectory>
+
 		<resources>
 			<resource>
-				<directory>src</directory>
-				<excludes>
-					<exclude>**/*.java</exclude>
-				</excludes>
+				<directory>resources</directory>
+				<filtering>true</filtering>
 			</resource>
 		</resources>
+
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -43,22 +43,8 @@
 		<dependency>
 			<groupId>org.spigotmc</groupId>
 			<artifactId>spigot-api</artifactId>
-			<version>${spigot.version}</version>
+			<version>1.15.2-R0.1-SNAPSHOT</version>
 			<scope>provided</scope>
-		</dependency>
-		
-		<dependency>
-			<groupId>com.mineglade</groupId>
-			<artifactId>moda</artifactId>
-			<version>${moda.version}</version>
-			<scope>provided</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.bstats</groupId>
-			<artifactId>bstats-bukkit</artifactId>
-			<version>1.5</version>
-			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
@@ -67,31 +53,27 @@
 			<version>1.7</version>
 			<scope>provided</scope>
 		</dependency>
-
+		
 		<dependency>
-			<groupId>xyz.derkades</groupId>
-			<artifactId>Derkutils</artifactId>
-			<version>1.5.2-legacy</version>
+			<groupId>moda.plugin</groupId>
+			<artifactId>moda</artifactId>
+			<version>${moda.version}</version>
+			<scope>provided</scope>
 		</dependency>
 
 	</dependencies>
 
 	<repositories>
-		
-		<repository>
-			<id>CodeMC</id>
-			<url>https://repo.codemc.org/repository/maven-public</url>
-		</repository>
-		
+
 		<repository>
 			<id>jitpack.io</id>
 			<url>https://jitpack.io</url>
 		</repository>
-		
+
 		<repository>
 			<id>spigot-repo</id>
 			<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
 		</repository>
-		
+
 	</repositories>
 </project>
