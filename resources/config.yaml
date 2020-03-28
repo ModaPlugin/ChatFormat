@@ -1,0 +1,14 @@
+######################################
+#         Chat Format Module         #
+######################################
+
+# The Chat Format Module allows you to
+# make your in-game chat look fancy.
+
+# Supported placeholders are:
+# - {MESSAGE}   The message the player sent
+# - {PREFIX}    The prefix of the user, provided by Vault, usually set with permissions plugins
+# - {SUFFIX}    The suffix of the user, provided by Vault, usually set with permissions plugins
+# - {GROUP}     The group of the user, provided by Vault, usually set with permissions plugins
+
+format: ""
