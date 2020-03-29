@@ -15,7 +15,7 @@ import xyz.derkades.derkutils.bukkit.PlaceholderUtil.Placeholder;
 public class ChatFormat extends Module<NoStorageHandler> {
 
 	@Override
-	public String getName() { return "Chat Format"; }
+	public String getName() { return "ChatFormat"; }
 
 	private VaultHandler vault;
 
