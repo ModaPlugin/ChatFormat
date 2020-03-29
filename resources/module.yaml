@@ -1,1 +1,1 @@
-main: 'moda.plugin.module.ChatFormatModule'
+main: 'moda.plugin.module.chat.format.ChatFormat'
