@@ -1,14 +1,23 @@
-######################################
-#         Chat Format Module         #
-######################################
+###############################################################
+#                          ChatFormat                         #
+###############################################################
 
-# The Chat Format Module allows you to
-# make your in-game chat look fancy.
+# The Chat Format Module allows you to make your in-game chat look fancy.
 
-# Supported placeholders are:
+# the ChatFormat module supports all Moda Core Placeholders, including ones added by other active modules.
+# Other Useful placeholders are:
 # - {MESSAGE}   The message the player sent
 # - {PREFIX}    The prefix of the user, provided by Vault, usually set with permissions plugins
 # - {SUFFIX}    The suffix of the user, provided by Vault, usually set with permissions plugins
 # - {GROUP}     The group of the user, provided by Vault, usually set with permissions plugins
 
-format: ""
+# Pick any of the preset chat formats or create your own, by commenting the active format and uncommenting the one you want.
+
+format: "&f{USERNAME}&8 ≫&7 {MESSAGE}"                                                  # a good-looking simple chat format
+#format: "<{USERNAME}> {MESSAGE}"                                                        # the default bukkit chat format
+#format: "{PREFIX} {DISPLAYNAME} {SUFFIX}≫ {MESSAGE}"                                    # a good looking vault-compliant chat format including prefixes and suffixes
+#format: "{PREFIX} {CHAT.COLOR.NAME}{NICKNAME} {SUFFIX}≫ {CHAT.COLOR.CHAT}{MESSAGE}"     # an advanced chat format that makes use of moda modules like Nickname and ChatColor
+
+# Useful related modules:
+# - ChatColor       https://github.com/modaplugin/ChatColor
+# - Nickname        https://github.com/modaplugin/Nickname
