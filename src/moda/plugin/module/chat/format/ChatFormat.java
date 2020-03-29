@@ -1,10 +1,7 @@
 package moda.plugin.module.chat.format;
 
-import moda.plugin.moda.modules.IMessage;
 import moda.plugin.moda.modules.Module;
 import moda.plugin.moda.utils.placeholders.ModaPlaceholderAPI;
-import moda.plugin.moda.utils.storage.DatabaseStorageHandler;
-import moda.plugin.moda.utils.storage.FileStorageHandler;
 import moda.plugin.moda.utils.storage.NoStorageHandler;
 import moda.plugin.moda.utils.vault.VaultHandler;
 import moda.plugin.moda.utils.vault.VaultNotAvailableException;
@@ -15,7 +12,7 @@ import org.bukkit.event.player.AsyncPlayerChatEvent;
 import xyz.derkades.derkutils.bukkit.Chat;
 import xyz.derkades.derkutils.bukkit.PlaceholderUtil.Placeholder;
 
-public class ChatFormatModule extends Module<NoStorageHandler> {
+public class ChatFormat extends Module<NoStorageHandler> {
 
 	@Override
 	public String getName() { return "Chat Format"; }
