@@ -2,21 +2,19 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.mineglade.moda</groupId>
-	<artifactId>ChatModule</artifactId>
+	<groupId>moda.plugin.module.chat</groupId>
+	<artifactId>format</artifactId>
 	<version>1.0</version>
-	<name>ChatModule</name>
-	<description>a quick &amp; easy chat formatting module for moda</description>
+	<name>ChatFormat</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jdk.version>1.8</jdk.version>
-		<spigot.version>1.12.2-R0.1-SNAPSHOT</spigot.version>
 		<moda.version>alpha</moda.version>
 	</properties>
 
-
 	<build>
+		<finalName>${project.name}</finalName>
 		<sourceDirectory>src</sourceDirectory>
 
 		<resources>
