@@ -14,7 +14,7 @@
 # Pick any of the preset chat formats or create your own, by commenting the active format and uncommenting the one you want.
 
 format: "&f{USERNAME}&8 ≫&7 {MESSAGE}"                                                  # a good-looking simple chat format
-#format: "<{USERNAME}> {MESSAGE}"                                                        # the default bukkit chat format
+#format: "<{USERNAME}> {MESSAGE}"                                                        # the default minecraft chat format
 #format: "{PREFIX} {DISPLAYNAME} {SUFFIX}≫ {MESSAGE}"                                    # a good looking vault-compliant chat format including prefixes and suffixes
 #format: "{PREFIX} {CHAT.COLOR.NAME}{NICKNAME} {SUFFIX}≫ {CHAT.COLOR.CHAT}{MESSAGE}"     # an advanced chat format that makes use of moda modules like Nickname and ChatColor
 
