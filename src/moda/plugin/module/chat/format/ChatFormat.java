@@ -47,5 +47,11 @@ public class ChatFormat extends Module<NoStorageHandler> {
 			getLogger().info("Vault not installed, vault Placeholders will not work.");
 			this.vault = null;
 		}
+		getLogger().info("ChatFormat module enabled.");
+	}
+
+	@Override
+	public void onDisable() {
+		getLogger().info("ChatFormat module disabled.");
 	}
 }
