@@ -8,11 +8,12 @@ import moda.plugin.moda.utils.vault.VaultNotAvailableException;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
+import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import xyz.derkades.derkutils.bukkit.Chat;
 import xyz.derkades.derkutils.bukkit.PlaceholderUtil.Placeholder;
 
-public class ChatFormat extends Module<NoStorageHandler> {
+public class ChatFormat extends Module<NoStorageHandler> implements Listener {
 
 	@Override
 	public String getName() { return "ChatFormat"; }
@@ -47,6 +48,7 @@ public class ChatFormat extends Module<NoStorageHandler> {
 			getLogger().info("Vault not installed, vault Placeholders will not work.");
 			this.vault = null;
 		}
+		registerListener(this);
 		getLogger().info("ChatFormat module enabled.");
 	}
 
