@@ -1,4 +1,4 @@
-package moda.plugin.module.chat.format;
+package cx.mia.moda.chat.format;
 
 import moda.plugin.moda.module.Module;
 import moda.plugin.moda.module.storage.NoStorageHandler;

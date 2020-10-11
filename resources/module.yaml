@@ -1,1 +1,1 @@
-main: 'moda.plugin.module.chat.format.ChatFormat'
+main: ${project.groupId}.${project.artifactId}.${project.name}
