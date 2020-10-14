@@ -1,10 +1,10 @@
-package cx.mia.moda.chat.format;
+package cx.moda.module.chatformat;
 
-import moda.plugin.moda.module.Module;
-import moda.plugin.moda.module.storage.NoStorageHandler;
-import moda.plugin.moda.placeholder.ModaPlaceholderAPI;
-import moda.plugin.moda.util.vault.VaultHandler;
-import moda.plugin.moda.util.vault.VaultUnavailableException;
+import cx.moda.moda.module.Module;
+import cx.moda.moda.module.storage.NoStorageHandler;
+import cx.moda.moda.placeholder.ModaPlaceholderAPI;
+import cx.moda.moda.util.vault.VaultHandler;
+import cx.moda.moda.util.vault.VaultUnavailableException;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -30,6 +30,7 @@ public class ChatFormat extends Module<NoStorageHandler> implements Listener {
 
 		final Placeholder message = new Placeholder("{MESSAGE}", event.getMessage());
 
+		//TODO
 		for (final Player recipient : event.getRecipients()) {
 			recipient.spigot().sendMessage(
 					ModaPlaceholderAPI.parsePlaceholders(player,
