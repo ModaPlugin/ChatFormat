@@ -13,6 +13,8 @@ import org.bukkit.event.player.AsyncPlayerChatEvent;
 import xyz.derkades.derkutils.bukkit.Chat;
 import xyz.derkades.derkutils.bukkit.PlaceholderUtil.Placeholder;
 
+import java.util.Optional;
+
 public class ChatFormat extends Module<NoStorageHandler> implements Listener {
 
 	@Override
@@ -33,7 +35,7 @@ public class ChatFormat extends Module<NoStorageHandler> implements Listener {
 		//TODO
 		for (final Player recipient : event.getRecipients()) {
 			recipient.spigot().sendMessage(
-					ModaPlaceholderAPI.parsePlaceholders(player,
+					ModaPlaceholderAPI.parsePlaceholders(Optional.of(player),
 							Chat.toComponentWithPapiPlaceholders(getConfig(), "format", player,
 									vaultPrefix, vaultSuffix, vaultGroup, message)));
 		}
